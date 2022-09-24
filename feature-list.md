@@ -46,7 +46,7 @@ Everything under the 'distr' and 'stat' pages on the TI-84 Plus CE.
   - Manual-fit linear regression (optional)
 
 ### Statistical tests:
-- TODO
+- TODO: complete this section
 
 ## 3. Solvers
 - Polynomial root finder (up to degree 10)
