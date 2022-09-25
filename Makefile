@@ -16,9 +16,9 @@ all: $(MAIN)
 
 $(MAIN): $(OBJ_FILES)
 	@echo "Linking object files"
-	$(CXX) $(CXXFLAGS) $(CPPFLAGS) -o $(MAIN) $(OBJ_FILES)
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -o $(MAIN) $(OBJ_FILES)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 	@echo "Compiling $< to $@"
 	@mkdir -p $(dir $@)
-	$(CXX) $(CXXFLAGS) $(CPPFLAGS) -c -o $@ $<
+	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -c -o $@ $<
