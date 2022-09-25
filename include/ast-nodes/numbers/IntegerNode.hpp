@@ -9,12 +9,12 @@ namespace OpenGC {
 
 // TODO: add support for integers wider than 64 bits
 class IntegerNode : Node {
-  public:
+public:
   IntegerNode() = default;
   IntegerNode(std::int64_t value);
   std::int64_t evaluate();
 
-  private:
+private:
   std::int64_t value;
 };
 

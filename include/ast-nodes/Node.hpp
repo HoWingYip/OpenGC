@@ -7,11 +7,11 @@
 namespace OpenGC {
 
 class Node {
-  public:
+public:
   // std::complex<long double> evaluate();
   std::size_t numChildren();
 
-  private:
+private:
   std::vector<Node> children;
 };
 
