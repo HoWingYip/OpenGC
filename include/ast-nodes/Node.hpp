@@ -8,12 +8,11 @@ namespace OpenGC {
 
 class Node {
   public:
-  
+  // std::complex<long double> evaluate();
+  std::size_t numChildren();
 
   private:
   std::vector<Node> children;
-  
-  std::complex<long double> evaluate();
 };
 
 }
