@@ -6,15 +6,14 @@
 namespace OpenGC {
 
 class RationalNode : Node {
-  public:
+public:
   RationalNode(std::int64_t n, std::int64_t d);
   RationalNode(IntegerNode &n, IntegerNode &d);
   long double evaluate();
 
-  private:
+private:
   IntegerNode n;
   IntegerNode d;
-  void simplify();
 };
 
 }
