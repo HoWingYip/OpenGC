@@ -1,10 +1,11 @@
 #include <iostream>
 
-#include "ast-nodes/numbers/RationalNode.hpp"
+#include "ast-nodes/numbers/RealNode.hpp"
 
 int main() {
-  OpenGC::RationalNode rationalNode(100, 28);
-  std::cout << rationalNode.evaluate() << '\n';
+  OpenGC::RealNode<std::int64_t> realNode(6942000000);
+  std::cout << realNode.evaluate() << realNode.toString();
 
-  std::cout << "Testing";
+  // FIXME: undefined reference to RealNode and Node methods because
+  // the templates in Node.cpp and RealNode.cpp are not specialised
 }

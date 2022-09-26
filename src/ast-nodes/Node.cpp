@@ -1,11 +1,15 @@
 #include "ast-nodes/Node.hpp"
 
-#include <complex>
-
 namespace OpenGC {
 
-std::size_t Node::numChildren() {
-  return this->children.size();
+template <class T>
+T Node<T>::evaluate() {
+  return nullptr;
+}
+
+template <class T>
+std::string Node<T>::toString() {
+  return "Node()";
 }
 
 }

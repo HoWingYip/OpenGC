@@ -1,0 +1,14 @@
+{
+  "files.associations": {
+    "string": "cpp",
+    "bit": "cpp",
+    "*.tcc": "cpp",
+    "complex": "cpp",
+    "functional": "cpp",
+    "string_view": "cpp",
+    "random": "cpp",
+    "istream": "cpp",
+    "limits": "cpp",
+    "numeric": "cpp"
+  }
+}
