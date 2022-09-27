@@ -15,8 +15,8 @@ RealNode<T> inherits from Node
 IntegerNode inherits from RealNode<std::int64_t> // T is std::int64_t
 
 RationalNode inherits from Node
-- IntegerNode num
-- IntegerNode den
+- std::int64_t num
+- std::int64_t den
 Note on RationalNode::evaluate(): if den.evaluate() returns zero, throw std::invalid_argument
 
 ComplexNode<T, U> inherits from Node. T and U are RealNode or subclasses thereof.
@@ -33,7 +33,7 @@ Operations will be represented by OpNode and its subclasses.
 OpNode inherits from Node
 + evaluate() -> depends LOL
 E.g. DivisionNode<AdditionNode<IntegerNode, IntegerNode>, IntegerNode>::evaluate() returns RationalNode. (Unless second argument is a multiple of the first, in which case IntegerNode is returned? Is that legal?) But calling SqrtNode::evaluate() on an IntegerNode with value 2 will return RealNode.
-Can use std::invoke_result to deduce that the return type of AdditionNode<IntegerNode, IntegerNode>::evaluate() is IntegerNode, which makes it quite clear that the first example should return a RationalNode - after all, the result of dividing two integers (where the second is nonzero) is obviously a rational.
+Can use std::invoke_result (or more likely, your own template definition) to deduce that the return type of AdditionNode<IntegerNode, IntegerNode>::evaluate() is IntegerNode, which makes it quite clear that the first example should return a RationalNode - after all, the result of dividing two integers (where the second is nonzero) is obviously a rational.
 
 Can perhaps also create a Simplify OpNode that simplifies any RationalNode with denominator 1 to an IntegerNode, and throws if denominator is not 1
 

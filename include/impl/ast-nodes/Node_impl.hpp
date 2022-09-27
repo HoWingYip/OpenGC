@@ -7,13 +7,13 @@
 
 namespace OpenGC {
 
-template <class T>
-T Node<T>::evaluate() {
-  return T(); // what should even go here?
-}
+// template <class T>
+// T Node<T>::evaluate() {
+//   return T(); // what should even go here?
+// }
 
-template <class T>
-std::string Node<T>::toString() {
+// template <class T>
+std::string Node::toString() {
   return "Node()";
 }
 

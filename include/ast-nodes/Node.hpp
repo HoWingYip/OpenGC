@@ -5,10 +5,10 @@
 
 namespace OpenGC {
 
-template <class T>
+// template <class T>
 class Node {
 public:
-  virtual T evaluate();
+  // virtual T evaluate();
   virtual std::string toString();
 };
 

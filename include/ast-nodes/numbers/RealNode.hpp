@@ -6,10 +6,10 @@
 namespace OpenGC {
 
 template <class T>
-class RealNode : public Node<T> {
+class RealNode : public Node {
 public:
   RealNode(T value);
-  T evaluate() override;
+  T evaluate();
   virtual std::string toString() override;
 
 protected:
