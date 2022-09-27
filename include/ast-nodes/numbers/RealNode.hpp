@@ -10,9 +10,9 @@ class RealNode : public Node<T> {
 public:
   RealNode(T value);
   T evaluate() override;
-  std::string toString() override;
+  virtual std::string toString() override;
 
-private:
+protected:
   T value;
 };
 

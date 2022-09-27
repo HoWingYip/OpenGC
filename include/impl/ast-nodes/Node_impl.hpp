@@ -9,7 +9,7 @@ namespace OpenGC {
 
 template <class T>
 T Node<T>::evaluate() {
-  return T();
+  return T(); // what should even go here?
 }
 
 template <class T>
