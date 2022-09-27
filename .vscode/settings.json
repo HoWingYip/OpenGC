@@ -9,6 +9,7 @@
     "random": "cpp",
     "istream": "cpp",
     "limits": "cpp",
-    "numeric": "cpp"
+    "numeric": "cpp",
+    "iostream": "cpp"
   }
 }

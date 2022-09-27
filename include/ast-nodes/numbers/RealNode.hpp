@@ -18,4 +18,6 @@ private:
 
 }
 
+#include "impl/ast-nodes/numbers/RealNode_impl.hpp"
+
 #endif

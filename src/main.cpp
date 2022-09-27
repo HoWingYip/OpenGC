@@ -8,4 +8,5 @@ int main() {
 
   // FIXME: undefined reference to RealNode and Node methods because
   // the templates in Node.cpp and RealNode.cpp are not specialised
+  // see https://stackoverflow.com/questions/495021/why-can-templates-only-be-implemented-in-the-header-file
 }

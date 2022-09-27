@@ -1,12 +1,12 @@
+#ifndef REAL_NODE_IMPL_H
+#define REAL_NODE_IMPL_H
+
 #include "ast-nodes/numbers/RealNode.hpp"
 
 #include <type_traits>
 #include <string>
-#include <algorithm>
 
 namespace OpenGC {
-
-int n = std::max(1, 2);
 
 template <class T>
 RealNode<T>::RealNode(T value) {
@@ -29,3 +29,5 @@ std::string RealNode<T>::toString() {
 }
 
 }
+
+#endif

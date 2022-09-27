@@ -14,4 +14,6 @@ public:
 
 }
 
+#include "impl/ast-nodes/Node_impl.hpp"
+
 #endif
