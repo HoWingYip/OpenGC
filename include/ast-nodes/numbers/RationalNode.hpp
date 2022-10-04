@@ -8,16 +8,16 @@
 
 namespace OpenGC {
 
-template <class T, class U>
+// template <class T, class U>
 class RationalNode : public Node {
 public:
-  RationalNode(T num, U den);
-  std::pair<T, U> evaluate();
+  RationalNode(std::int64_t num, std::int64_t den);
+  std::pair<std::int64_t, std::int64_t> evaluate();
   std::string toString() override;
 
 private:
-  T num;
-  U den;
+  std::int64_t num;
+  std::int64_t den;
 };
 
 }

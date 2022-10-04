@@ -5,10 +5,10 @@
 
 namespace OpenGC {
 
-template <class T>
-class IntegerNode : public RealNode<T> {
+// template <class T>
+class IntegerNode : public RealNode<std::int64_t> {
 public:
-  IntegerNode(T value);
+  IntegerNode(std::int64_t value);
   std::string toString() override;
 };
 

@@ -8,22 +8,20 @@
 
 namespace OpenGC {
 
-template <class T>
 // Note: if no parent constructor is provided in initializer list,
 // the parent's default constructor is called
 // But RealNode has no default constructor!
 // Therefore we call the RealNode constructor explicitly.
-IntegerNode<T>::IntegerNode(T value) : RealNode<T>(value) {
-  static_assert(
-    std::is_integral_v<T>,
-    "IntegerNode must be constructed from integer type"
-  );
+IntegerNode::IntegerNode(std::int64_t value) : RealNode<std::int64_t>(value) {
+  // static_assert(
+  //   std::is_integral_v<T>,
+  //   "IntegerNode must be constructed from integer type"
+  // );
 
   this->value = value;
 }
 
-template <class T>
-std::string IntegerNode<T>::toString() {
+std::string IntegerNode::toString() {
   return "IntegerNode(" + std::to_string(this->value) + ")";
 }
 

@@ -11,12 +11,11 @@
 
 namespace OpenGC {
 
-template <class T, class U>
-RationalNode<T, U>::RationalNode(T num, U den) {
-  static_assert(
-    std::is_integral_v<T> && std::is_integral_v<U>,
-    "Both numerator and denominator of a rational must be of integer type"
-  );
+RationalNode::RationalNode(std::int64_t num, std::int64_t den) {
+  // static_assert(
+  //   std::is_integral_v<T> && std::is_integral_v<U>,
+  //   "Both numerator and denominator of a rational must be of integer type"
+  // );
 
   assert(den != 0 && "Denominator of a rational cannot be zero");
 
@@ -30,13 +29,11 @@ RationalNode<T, U>::RationalNode(T num, U den) {
   }
 }
 
-template <class T, class U>
-std::pair<T, U> RationalNode<T, U>::evaluate() {
-  return std::pair<T, U>(this->num, this->den);
+std::pair<std::int64_t, std::int64_t> RationalNode::evaluate() {
+  return std::pair<std::int64_t, std::int64_t>(this->num, this->den);
 }
 
-template <class T, class U>
-std::string RationalNode<T, U>::toString() {
+std::string RationalNode::toString() {
   return "RationalNode(" + std::to_string(this->num) + '/' + std::to_string(this->den) + ")";
 }
 
